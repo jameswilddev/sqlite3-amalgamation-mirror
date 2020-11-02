@@ -9,3 +9,4 @@ jobs:
         submodules: true
     - run: ./sqlite/configure
     - run: make
+    - run: ls
