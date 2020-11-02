@@ -1,0 +1,7 @@
+name: Build Amalgamation
+on: [push, pull_request]
+runs-on: ubuntu-18.04
+steps:
+- uses: actions/checkout@v2
+- run: ./sqlite/configure
+- run: make
