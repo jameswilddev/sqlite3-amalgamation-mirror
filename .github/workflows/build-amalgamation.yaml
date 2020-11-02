@@ -8,5 +8,6 @@ jobs:
       with:
         submodules: true
     - run: ./sqlite/configure
-    - run: make
+    - run: make fulltest
+    - run: make sqlite3.c
     - run: ls
