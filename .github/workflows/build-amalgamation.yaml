@@ -4,6 +4,7 @@ jobs:
   build-amalgamation:
     runs-on: ubuntu-18.04
     steps:
+    - run: apt install tcl
     - uses: actions/checkout@v2
       with:
         submodules: true
