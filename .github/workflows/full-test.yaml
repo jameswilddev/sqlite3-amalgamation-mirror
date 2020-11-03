@@ -1,7 +1,7 @@
-name: Build Amalgamation
-on: [push, pull_request]
+name: Full Test
+on: pull_request
 jobs:
-  build-amalgamation:
+  full-test:
     runs-on: ubuntu-18.04
     steps:
     - run: sudo apt install tcl-dev
@@ -10,5 +10,3 @@ jobs:
         submodules: true
     - run: ./sqlite/configure
     - run: make fulltest
-    - run: make sqlite3.c
-    - run: ls
