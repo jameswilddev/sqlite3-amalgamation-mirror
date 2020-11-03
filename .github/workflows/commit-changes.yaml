@@ -12,9 +12,9 @@ jobs:
       with:
         submodules: true
     - run: ./sqlite/configure
-    - run: make sqlite3.c
+    - run: make sqlite3.c sqlite3.h
     - run: git config user.email jameswilddev@outlook.com
     - run: git config user.name jameswilddev
     - run: git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-    - run: git add sqlite3.c
+    - run: git add sqlite3.c sqlite3.h
     - run: git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generated changes from build tools."; git push)
