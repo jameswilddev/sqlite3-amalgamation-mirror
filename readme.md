@@ -1,4 +1,4 @@
-# SQLite Amalgamation Mirror [![Continuous Integration](https://github.com/jameswilddev/sqlite3-amalgamation-mirror/workflows/Full%20Test/badge.svg)] [![Continuous Integration](https://github.com/jameswilddev/sqlite3-amalgamation-mirror/workflows/Commit%20Changes/badge.svg)] [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+# SQLite Amalgamation Mirror [![Continuous Integration](https://github.com/jameswilddev/sqlite3-amalgamation-mirror/workflows/Full%20Test/badge.svg)](https://github.com/jameswilddev/sqlite3-amalgamation-mirror/actions?query=workflow%3A%22Full+Test%22) [![Continuous Integration](https://github.com/jameswilddev/sqlite3-amalgamation-mirror/workflows/Commit%20Changes/badge.svg)](https://github.com/jameswilddev/sqlite3-amalgamation-mirror/actions?query=workflow%3A%22Commit+Changes%22) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
 This is a mirror of the latest sqlite3.c file buildable from [https://github.com/sqlite/sqlite].
 
