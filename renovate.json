@@ -1,10 +1,10 @@
 {
-    "extends": [
-      "config:base"
-    ],
-    "automerge": true,
-    "git-submodules": {
-      "enabled": true
-    }
+  "extends": [
+    "config:base"
+  ],
+  "automerge": true,
+  "git-submodules": {
+    "enabled": true
+  }
 }
   
