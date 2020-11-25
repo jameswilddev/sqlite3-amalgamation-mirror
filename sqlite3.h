@@ -125,7 +125,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.34.0"
 #define SQLITE_VERSION_NUMBER 3034000
-#define SQLITE_SOURCE_ID      "2020-11-24 21:19:23 db25f1dc8eb8b8bd45912e9b457d4cc32687bc4f709ce1878e9b4ccedbb18af9"
+#define SQLITE_SOURCE_ID      "2020-11-24 23:40:48 5b4325295b2f17b7a4eaa2d3a30d06a24801992b3aa17c7d57e015f9f395fb95"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -6193,7 +6193,7 @@ SQLITE_API int sqlite3_db_readonly(sqlite3 *db, const char *zDbName);
 **
 ** ^The sqlite3_txn_state(D,S) interface returns the current
 ** [transaction state] of schema S in database connection D.  ^If S is NULL,
-** then the highest transaction state of any schema on databse connection D
+** then the highest transaction state of any schema on database connection D
 ** is returned.  Transaction states are (in order of lowest to highest):
 ** <ol>
 ** <li value="0"> SQLITE_TXN_NONE
