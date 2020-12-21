@@ -125,7 +125,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.35.0"
 #define SQLITE_VERSION_NUMBER 3035000
-#define SQLITE_SOURCE_ID      "2020-12-21 12:14:59 3b0c9b41a877c7344ef3b7c5b6981436005716e25b41b1a1ffc145520243abd3"
+#define SQLITE_SOURCE_ID      "2020-12-21 14:51:33 788b96851d9ced84757c48dc3e0414cab27ee7e50e9730dab30b2e42a7762397"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -3499,6 +3499,7 @@ SQLITE_API void sqlite3_progress_handler(sqlite3*, int, int(*)(void*), void*);
 **          that uses dot-files in place of posix advisory locking.
 ** <tr><td> file:data.db?mode=readonly <td>
 **          An error. "readonly" is not a valid option for the "mode" parameter.
+**          Use "ro" instead:  "file:data.db?mode=ro".
 ** </table>
 **
 ** ^URI hexadecimal escape sequences (%HH) are supported within the path and
