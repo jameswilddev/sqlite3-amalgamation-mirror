@@ -125,7 +125,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.35.0"
 #define SQLITE_VERSION_NUMBER 3035000
-#define SQLITE_SOURCE_ID      "2020-12-22 20:35:22 9587fa8b29fc2f91d751a71b909f574014656f24d276b4974f47fcc18dbadcb8"
+#define SQLITE_SOURCE_ID      "2020-12-23 16:46:39 823f75c2e448b649cbe9e174be21524ae3f580beedced65701ad49a2dcc5ee19"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -10439,6 +10439,14 @@ SQLITE_API int sqlite3session_patchset(
 ** changeset containing zero changes.
 */
 SQLITE_API int sqlite3session_isempty(sqlite3_session *pSession);
+
+/*
+** CAPI3REF: Query for the amount of heap memory used by a session object.
+**
+** This API returns the total amount of heap memory in bytes currently
+** used by the session object passed as the only argument.
+*/
+SQLITE_API sqlite3_int64 sqlite3session_memory_used(sqlite3_session *pSession);
 
 /*
 ** CAPI3REF: Create An Iterator To Traverse A Changeset
