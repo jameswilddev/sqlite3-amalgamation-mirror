@@ -125,7 +125,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.36.0"
 #define SQLITE_VERSION_NUMBER 3036000
-#define SQLITE_SOURCE_ID      "2021-06-03 18:56:42 4a587c3492faa99490fd67ca1de9fceafcdc12d220f42817791923be258b73f1"
+#define SQLITE_SOURCE_ID      "2021-06-04 17:47:08 9a2ab6092d644fc3effc4ab4aca33efb2b4dd4213b2154d518a3e87eec4d3983"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -7811,7 +7811,8 @@ SQLITE_API int sqlite3_test_control(int op, ...);
 #define SQLITE_TESTCTRL_EXTRA_SCHEMA_CHECKS     29
 #define SQLITE_TESTCTRL_SEEK_COUNT              30
 #define SQLITE_TESTCTRL_TRACEFLAGS              31
-#define SQLITE_TESTCTRL_LAST                    31  /* Largest TESTCTRL */
+#define SQLITE_TESTCTRL_TUNE                    32
+#define SQLITE_TESTCTRL_LAST                    32  /* Largest TESTCTRL */
 
 /*
 ** CAPI3REF: SQL Keyword Checking
