@@ -125,7 +125,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.37.0"
 #define SQLITE_VERSION_NUMBER 3037000
-#define SQLITE_SOURCE_ID      "2021-06-23 11:39:00 72e09b6c9b74c8226b231fec021228af6bc191fc1b5798d0ff2e893f4ba203bf"
+#define SQLITE_SOURCE_ID      "2021-06-23 17:41:38 0e0ece7111945d61278e60385f883303b593ed0d64beeb951b9c49f243531628"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -4169,10 +4169,15 @@ SQLITE_API int sqlite3_prepare16_v3(
 ** ^The string returned by sqlite3_expanded_sql(P), on the other hand,
 ** is obtained from [sqlite3_malloc()] and must be free by the application
 ** by passing it to [sqlite3_free()].
+**
+** ^The sqlite3_normalized_sql() interface is only available if
+** the [SQLITE_ENABLE_NORMALIZE] compile-time option is defined.
 */
 SQLITE_API const char *sqlite3_sql(sqlite3_stmt *pStmt);
 SQLITE_API char *sqlite3_expanded_sql(sqlite3_stmt *pStmt);
+#ifdef SQLITE_ENABLE_NORMALIZE
 SQLITE_API const char *sqlite3_normalized_sql(sqlite3_stmt *pStmt);
+#endif
 
 /*
 ** CAPI3REF: Determine If An SQL Statement Writes The Database
