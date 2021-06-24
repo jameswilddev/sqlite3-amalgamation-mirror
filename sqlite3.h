@@ -125,7 +125,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.37.0"
 #define SQLITE_VERSION_NUMBER 3037000
-#define SQLITE_SOURCE_ID      "2021-06-23 17:41:38 0e0ece7111945d61278e60385f883303b593ed0d64beeb951b9c49f243531628"
+#define SQLITE_SOURCE_ID      "2021-06-24 18:23:54 d091150ff80709a1e50e0431aa33021f036979e4a88e9769eeec431dfad6d5f5"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -516,6 +516,7 @@ SQLITE_API int sqlite3_exec(
 #define SQLITE_CANTOPEN_CONVPATH       (SQLITE_CANTOPEN | (4<<8))
 #define SQLITE_CANTOPEN_DIRTYWAL       (SQLITE_CANTOPEN | (5<<8)) /* Not Used */
 #define SQLITE_CANTOPEN_SYMLINK        (SQLITE_CANTOPEN | (6<<8))
+#define SQLITE_CANTOPEN_EXISTS         (SQLITE_CANTOPEN | (7<<8))
 #define SQLITE_CORRUPT_VTAB            (SQLITE_CORRUPT | (1<<8))
 #define SQLITE_CORRUPT_SEQUENCE        (SQLITE_CORRUPT | (2<<8))
 #define SQLITE_CORRUPT_INDEX           (SQLITE_CORRUPT | (3<<8))
@@ -3394,6 +3395,12 @@ SQLITE_API void sqlite3_progress_handler(sqlite3*, int, int(*)(void*), void*);
 **
 ** [[OPEN_NOFOLLOW]] ^(<dt>[SQLITE_OPEN_NOFOLLOW]</dt>
 ** <dd>The database filename is not allowed to be a symbolic link</dd>
+**
+** [[OPEN_EXCLUSIVE]] ^(<dt>[SQLITE_OPEN_EXCLUSIVE]</dt>
+** <dd>This flag causes the open to fail if the database file already
+** exists.  The open will only be success if this flag is used in combination
+** with the SQLITE_OPEN_CREATE and SQLITE_OPEN_READWRITE flags and if
+** the file does not previously exist.</dd>
 ** </dl>)^
 **
 ** If the 3rd parameter to sqlite3_open_v2() is not one of the
