@@ -125,7 +125,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.37.0"
 #define SQLITE_VERSION_NUMBER 3037000
-#define SQLITE_SOURCE_ID      "2021-06-24 18:23:54 d091150ff80709a1e50e0431aa33021f036979e4a88e9769eeec431dfad6d5f5"
+#define SQLITE_SOURCE_ID      "2021-06-25 00:25:38 8acaf7964551b4524fcdbb8d01fae7b0911508ecf6dcf23c3e0f8d8c790b78d8"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -9031,8 +9031,9 @@ SQLITE_API void sqlite3_log(int iErrCode, const char *zFormat, ...);
 **
 ** A single database handle may have at most a single write-ahead log callback
 ** registered at one time. ^Calling [sqlite3_wal_hook()] replaces any
-** previously registered write-ahead log callback. ^Note that the
-** [sqlite3_wal_autocheckpoint()] interface and the
+** previously registered write-ahead log callback. ^The return value is
+** a copy of the third parameter from the previous call, if any, or 0.
+** ^Note that the [sqlite3_wal_autocheckpoint()] interface and the
 ** [wal_autocheckpoint pragma] both invoke [sqlite3_wal_hook()] and will
 ** overwrite any prior [sqlite3_wal_hook()] settings.
 */
