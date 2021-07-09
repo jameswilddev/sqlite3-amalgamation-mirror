@@ -54,18 +54,6 @@ extern "C" {
 #ifndef SQLITE_CDECL
 # define SQLITE_CDECL
 #endif
-#ifndef SQLITE_APICALL
-# define SQLITE_APICALL
-#endif
-#ifndef SQLITE_STDCALL
-# define SQLITE_STDCALL SQLITE_APICALL
-#endif
-#ifndef SQLITE_CALLBACK
-# define SQLITE_CALLBACK
-#endif
-#ifndef SQLITE_SYSAPI
-# define SQLITE_SYSAPI
-#endif
 
 /*
 ** These no-op macros are used in front of interfaces to mark those
@@ -125,7 +113,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.37.0"
 #define SQLITE_VERSION_NUMBER 3037000
-#define SQLITE_SOURCE_ID      "2021-07-09 00:12:05 eb8af9a494fb68c0a1c600b3ac71467645b51b296fc6e2116d7d855319d59a59"
+#define SQLITE_SOURCE_ID      "2021-07-09 16:00:36 f14d3571598ce338b5bae17f00ae0031d9c207f03dbc7056ed30969871d3becf"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
