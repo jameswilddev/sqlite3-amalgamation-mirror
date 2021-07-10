@@ -43,7 +43,9 @@ extern "C" {
 
 
 /*
-** Provide the ability to override linkage features of the interface.
+** Facilitate override of interface linkage and calling conventions.
+** Be aware that some or many of these next few defined macros may
+** not be used within this particular translation of sqlite.h.in .
 */
 #ifndef SQLITE_EXTERN
 # define SQLITE_EXTERN extern
@@ -53,6 +55,18 @@ extern "C" {
 #endif
 #ifndef SQLITE_CDECL
 # define SQLITE_CDECL
+#endif
+#ifndef SQLITE_APICALL
+# define SQLITE_APICALL
+#endif
+#ifndef SQLITE_STDCALL
+# define SQLITE_STDCALL SQLITE_APICALL
+#endif
+#ifndef SQLITE_CALLBACK
+# define SQLITE_CALLBACK
+#endif
+#ifndef SQLITE_SYSAPI
+# define SQLITE_SYSAPI
 #endif
 
 /*
@@ -113,7 +127,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.37.0"
 #define SQLITE_VERSION_NUMBER 3037000
-#define SQLITE_SOURCE_ID      "2021-07-09 16:00:36 f14d3571598ce338b5bae17f00ae0031d9c207f03dbc7056ed30969871d3becf"
+#define SQLITE_SOURCE_ID      "2021-07-09 23:12:42 7cb09aef49c0b98c0c5e332d953a2eeb71ae9e243b1e37ab1c8ed4af15d46f50"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
