@@ -148,7 +148,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.37.0"
 #define SQLITE_VERSION_NUMBER 3037000
-#define SQLITE_SOURCE_ID      "2021-07-15 23:34:14 bacfa93677fbe014737fab7dbdb4e7a168a310bc5b914b17896ae2a48435c7b1"
+#define SQLITE_SOURCE_ID      "2021-07-16 17:11:21 56b0f5418dad34d1e83d53741916e2a38a5448369031d959b8a44867774be657"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -4197,7 +4197,7 @@ SQLITE_API int sqlite3_prepare16_v3(
 ** are managed by SQLite and are automatically freed when the prepared
 ** statement is finalized.
 ** ^The string returned by sqlite3_expanded_sql(P), on the other hand,
-** is obtained from [sqlite3_malloc()] and must be free by the application
+** is obtained from [sqlite3_malloc()] and must be freed by the application
 ** by passing it to [sqlite3_free()].
 **
 ** ^The sqlite3_normalized_sql() interface is only available if
