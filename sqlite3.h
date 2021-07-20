@@ -148,7 +148,7 @@ extern "C" {
 */
 #define SQLITE_VERSION        "3.37.0"
 #define SQLITE_VERSION_NUMBER 3037000
-#define SQLITE_SOURCE_ID      "2021-07-19 20:52:31 f9c6426de3b413ff8fcf04a00931ca5f123f996c572b35181af114afa8d811d7"
+#define SQLITE_SOURCE_ID      "2021-07-20 02:02:24 18068cc60698d4944a9d682cdf34b14b4d4b32f043f8d584dbf41c2bb5ac6220"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -9922,6 +9922,10 @@ SQLITE_API unsigned char *sqlite3_serialize(
 ** The sqlite3_deserialize() interface will fail with SQLITE_BUSY if the
 ** database is currently in a read transaction or is involved in a backup
 ** operation.
+**
+** It is not possible to deserialized into the TEMP database.  If the
+** S argument to sqlite3_deserialize(D,S,P,N,M,F) is "temp" then the
+** function returns SQLITE_ERROR.
 **
 ** If sqlite3_deserialize(D,S,P,N,M,F) fails for any reason and if the
 ** SQLITE_DESERIALIZE_FREEONCLOSE bit is set in argument F, then
